@@ -41,7 +41,7 @@ export interface Expense {
   timestamp: string;
 }
 
-export type TabId = 'home' | 'itinerary' | 'photos' | 'expense' | 'documents' | 'emergency' | 'settings' | 'summary' | 'celebration' | 'carousel';
+export type TabId = 'home' | 'itinerary' | 'photos' | 'expense' | 'documents' | 'emergency' | 'settings' | 'summary' | 'celebration' | 'carousel' | 'maps' | 'weather';
 
 export interface AppState {
   activeTab: TabId;
