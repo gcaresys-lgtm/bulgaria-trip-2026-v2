@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useAppStore } from '../../stores';
 import { SkeletonCard } from '../ui/Skeleton';
@@ -6,17 +6,19 @@ import { SkeletonCard } from '../ui/Skeleton';
 const HomeTab = lazy(() => import('../home/HomeTab'));
 const ItineraryTab = lazy(() => import('../itinerary/ItineraryTab'));
 const PhotosTab = lazy(() => import('../photos/PhotosTab'));
-const TipsTab = lazy(() => import('../tips/TipsTab'));
-const ChecklistTab = lazy(() => import('../checklist/ChecklistTab'));
+const ExpenseTracker = lazy(() => import('../expense/ExpenseTracker'));
+const DocumentsTab = lazy(() => import('../documents/DocumentsTab'));
 const EmergencyTab = lazy(() => import('../emergency/EmergencyTab'));
+const SettingsTab = lazy(() => import('../settings/SettingsTab'));
 
 const tabComponents: Record<string, React.LazyExoticComponent<React.FC>> = {
   home: HomeTab,
   itinerary: ItineraryTab,
   photos: PhotosTab,
-  tips: TipsTab,
-  checklist: ChecklistTab,
+  expense: ExpenseTracker,
+  documents: DocumentsTab,
   emergency: EmergencyTab,
+  settings: SettingsTab,
 };
 
 const pageVariants = {

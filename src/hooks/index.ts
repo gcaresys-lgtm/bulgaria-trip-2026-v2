@@ -148,13 +148,18 @@ export function useCurrencyConverter() {
     ILS: 1.8645,
     EUR: 1.956,
     USD: 1.82,
+    BGN: 1,
   };
 
   const convert = useCallback((amount: number, from: keyof typeof rates): number => {
     return amount * rates[from];
   }, []);
 
-  return { convert, rates };
+  const convertToBGN = useCallback((amount: number, from: keyof typeof rates): number => {
+    return amount / rates[from];
+  }, []);
+
+  return { convert, convertToBGN, rates };
 }
 
 // Local storage hook
