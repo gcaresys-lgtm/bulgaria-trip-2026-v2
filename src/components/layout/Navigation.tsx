@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Home, Map, Camera, DollarSign, FileText, AlertCircle, Settings } from 'lucide-react';
+import { Home, Map, Camera, DollarSign, FileText, AlertCircle, Settings, Award } from 'lucide-react';
 import { useAppStore, useTripStore, usePhotosStore } from '../../stores';
 import { useExpenseStore } from '../../stores/trip';
 import type { TabId } from '../../types';
@@ -11,6 +11,7 @@ const tabs: { id: TabId; label: string; icon: React.ReactNode }[] = [
   { id: 'expense', label: 'הוצאות', icon: <DollarSign size={20} /> },
   { id: 'documents', label: 'מסמכים', icon: <FileText size={20} /> },
   { id: 'emergency', label: 'חירום', icon: <AlertCircle size={20} /> },
+  { id: 'summary', label: 'סיכום', icon: <Award size={20} /> },
   { id: 'settings', label: 'הגדרות', icon: <Settings size={20} /> },
 ];
 

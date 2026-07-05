@@ -174,7 +174,7 @@ export default function HomeTab() {
       <Card>
         <div className="p-4">
           <h3 className="font-bold text-slate-800 mb-3">⚡ פעולות מהירות</h3>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-4 gap-2">
             <Button
               variant="secondary"
               size="sm"
@@ -192,6 +192,15 @@ export default function HomeTab() {
             >
               <span className="text-lg">📸</span>
               <span className="text-[10px]">תמונה</span>
+            </Button>
+            <Button
+              variant="secondary"
+              size="sm"
+              className="flex flex-col items-center h-16"
+              onClick={() => setActiveTab('summary')}
+            >
+              <span className="text-lg">🏆</span>
+              <span className="text-[10px]">סיכום</span>
             </Button>
             <Button
               variant="secondary"

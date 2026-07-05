@@ -10,6 +10,7 @@ const ExpenseTracker = lazy(() => import('../expense/ExpenseTracker'));
 const DocumentsTab = lazy(() => import('../documents/DocumentsTab'));
 const EmergencyTab = lazy(() => import('../emergency/EmergencyTab'));
 const SettingsTab = lazy(() => import('../settings/SettingsTab'));
+const TripSummary = lazy(() => import('../summary/TripSummary'));
 
 const tabComponents: Record<string, React.LazyExoticComponent<React.FC>> = {
   home: HomeTab,
@@ -19,6 +20,7 @@ const tabComponents: Record<string, React.LazyExoticComponent<React.FC>> = {
   documents: DocumentsTab,
   emergency: EmergencyTab,
   settings: SettingsTab,
+  summary: TripSummary,
 };
 
 const pageVariants = {
