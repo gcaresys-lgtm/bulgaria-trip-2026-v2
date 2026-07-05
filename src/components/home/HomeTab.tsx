@@ -197,10 +197,10 @@ export default function HomeTab() {
               variant="secondary"
               size="sm"
               className="flex flex-col items-center h-16"
-              onClick={() => setActiveTab('summary')}
+              onClick={() => setActiveTab('celebration')}
             >
-              <span className="text-lg">🏆</span>
-              <span className="text-[10px]">סיכום</span>
+              <span className="text-lg">🎉</span>
+              <span className="text-[10px]">חגיגה</span>
             </Button>
             <Button
               variant="secondary"

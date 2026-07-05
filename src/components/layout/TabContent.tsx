@@ -11,6 +11,8 @@ const DocumentsTab = lazy(() => import('../documents/DocumentsTab'));
 const EmergencyTab = lazy(() => import('../emergency/EmergencyTab'));
 const SettingsTab = lazy(() => import('../settings/SettingsTab'));
 const TripSummary = lazy(() => import('../summary/TripSummary'));
+const CelebrationPage = lazy(() => import('../celebration/CelebrationPage'));
+const CarouselExport = lazy(() => import('../celebration/CarouselExport'));
 
 const tabComponents: Record<string, React.LazyExoticComponent<React.FC>> = {
   home: HomeTab,
@@ -21,6 +23,8 @@ const tabComponents: Record<string, React.LazyExoticComponent<React.FC>> = {
   emergency: EmergencyTab,
   settings: SettingsTab,
   summary: TripSummary,
+  celebration: CelebrationPage,
+  carousel: CarouselExport,
 };
 
 const pageVariants = {

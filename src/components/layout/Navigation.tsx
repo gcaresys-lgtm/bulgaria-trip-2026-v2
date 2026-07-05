@@ -1,18 +1,19 @@
 import { motion } from 'framer-motion';
-import { Home, Map, Camera, DollarSign, FileText, AlertCircle, Settings, Award } from 'lucide-react';
+import { Home, Map, Camera, DollarSign, FileText, AlertCircle, Settings, Sparkles, Images } from 'lucide-react';
 import { useAppStore, useTripStore, usePhotosStore } from '../../stores';
 import { useExpenseStore } from '../../stores/trip';
 import type { TabId } from '../../types';
 
 const tabs: { id: TabId; label: string; icon: React.ReactNode }[] = [
-  { id: 'home', label: 'בית', icon: <Home size={20} /> },
-  { id: 'itinerary', label: 'מסלול', icon: <Map size={20} /> },
-  { id: 'photos', label: 'תמונות', icon: <Camera size={20} /> },
-  { id: 'expense', label: 'הוצאות', icon: <DollarSign size={20} /> },
-  { id: 'documents', label: 'מסמכים', icon: <FileText size={20} /> },
-  { id: 'emergency', label: 'חירום', icon: <AlertCircle size={20} /> },
-  { id: 'summary', label: 'סיכום', icon: <Award size={20} /> },
-  { id: 'settings', label: 'הגדרות', icon: <Settings size={20} /> },
+  { id: 'home', label: 'בית', icon: <Home size={18} /> },
+  { id: 'itinerary', label: 'מסלול', icon: <Map size={18} /> },
+  { id: 'photos', label: 'תמונות', icon: <Camera size={18} /> },
+  { id: 'expense', label: 'הוצאות', icon: <DollarSign size={18} /> },
+  { id: 'documents', label: 'מסמכים', icon: <FileText size={18} /> },
+  { id: 'emergency', label: 'חירום', icon: <AlertCircle size={18} /> },
+  { id: 'celebration', label: 'חגיגה', icon: <Sparkles size={18} /> },
+  { id: 'carousel', label: 'קארוסל', icon: <Images size={18} /> },
+  { id: 'settings', label: 'הגדרות', icon: <Settings size={18} /> },
 ];
 
 export function Navigation() {
@@ -45,7 +46,7 @@ export function Navigation() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className="relative flex flex-col items-center justify-center min-w-[50px] h-full px-1"
+              className="relative flex flex-col items-center justify-center min-w-[44px] h-full px-1"
             >
               {isActive && (
                 <motion.div
@@ -65,14 +66,14 @@ export function Navigation() {
               >
                 {tab.icon}
                 {badge && (
-                  <span className="absolute -top-1 -right-2 bg-danger-500 text-white text-[9px] font-bold px-1 py-0.5 rounded-full min-w-[16px] text-center">
+                  <span className="absolute -top-1 -right-2 bg-danger-500 text-white text-[8px] font-bold px-1 py-0.5 rounded-full min-w-[14px] text-center">
                     {badge}
                   </span>
                 )}
               </motion.div>
 
               <span
-                className={`text-[9px] mt-1 transition-colors ${
+                className={`text-[8px] mt-1 transition-colors ${
                   isActive ? 'text-primary-600 font-medium' : 'text-slate-500'
                 }`}
               >
